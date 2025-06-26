@@ -63,9 +63,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return
 
         if price and title:
-            await update.message.reply_text(f"🛍️ Product: {title}\n💰 Price: {price} ₸")
+            await update.message.reply_text(f"Product: {title}\n Price: {price} ₸")
         else:
-            await update.message.reply_text("❌ Failed to parse product details. Check the link.")
+            await update.message.reply_text("Failed to parse product. Check the link.")
 
         # Reset user state
         user_choices.pop(user_id, None)
@@ -77,5 +77,5 @@ if __name__ == "__main__":
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-    print("🤖 Bot is running...")
+    print("Bot is running...")
     app.run_polling()
