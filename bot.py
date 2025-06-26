@@ -5,7 +5,7 @@ from intertop import IntertopParser
 from wildberries import WildberriesParser
 import asyncio
 
-BOT_TOKEN = "7765941206:AAHEEqWZU1JIh0ZypRG5RZBQMbCQPrCzF88"
+BOT_TOKEN = "Input your telegram bot token"
 
 # Store user choices
 user_choices = {}
